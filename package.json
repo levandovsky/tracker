@@ -1,0 +1,19 @@
+{
+  "name": "fullstack-vue-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levandovsky/tracker.git"
+  },
+  "author": "Yegor Levandovskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levandovsky/tracker/issues"
+  },
+  "homepage": "https://github.com/levandovsky/tracker#readme"
+}
