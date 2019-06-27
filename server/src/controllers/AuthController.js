@@ -13,7 +13,12 @@ module.exports = {
   async register(req, res) {
     try {
       const user = await User.create(req.body);
-      res.send(user.toJSON());
+      const userJson = user.toJSON();
+
+      res.send({
+        user: userJson,
+        token: jwtSignIn(userJson),
+      });
     } catch (err) {
       // throw if user already exists
       res.status(400).send({
@@ -34,10 +39,10 @@ module.exports = {
           error: 'Invalid login data!',
         });
       }
-      const userIsValid = password === user.password;
+      const userIsValid = await user.comparePasswords(password);
       if (!userIsValid) {
         return res.status(403).send({
-          error: 'Invalid login data!',
+          error: 'Password error',
         });
       }
       const userJSON = user.toJSON();

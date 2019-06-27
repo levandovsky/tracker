@@ -25,4 +25,16 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+.error {
+  color: red;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.field {
+  width: 100%;
+}
 </style>
